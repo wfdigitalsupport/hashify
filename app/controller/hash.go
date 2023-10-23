@@ -120,7 +120,7 @@ func ComputeHash(c echo.Context) error {
 	case "SHA1":
 		h = sha1.New()
 	case "SHA256":
-		h = sha256.New()
+		h = hmac.New()
 	case "SHA384":
 		h = sha512.New384()
 	case "SHA512":
