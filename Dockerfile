@@ -8,7 +8,7 @@ COPY /app $GOPATH/src/github.com/dwin/hashify/app
 WORKDIR $GOPATH/src/github.com/dwin/hashify/app
 #get dependancies
 #you can also use dep
-RUN go install github.com/cmd@latest
+RUN go install golang.org/dl/go1.10.7@latest
 #RUN go get -d -v
 
 #build the binary
