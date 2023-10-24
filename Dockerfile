@@ -8,7 +8,8 @@ COPY /app $GOPATH/src/github.com/dwin/hashify/app
 WORKDIR $GOPATH/src/github.com/dwin/hashify/app
 #get dependancies
 #you can also use dep
-RUN go get -d -v
+RUN go install github.com/cmd@latest
+#RUN go get -d -v
 
 #build the binary
 RUN CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -a -installsuffix cgo -o /go/bin/hashify
